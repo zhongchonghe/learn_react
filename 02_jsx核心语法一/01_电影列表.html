@@ -12,6 +12,39 @@
     <script src="../react.development.js"></script>
     <script src="../react-dom.development.js"></script>
     <script src="../babel.min.js"></script>
+
+    <div id="app"></div>
+
+    <script type="text/babel">
+        class App extends React.Component{
+            constructor(props){
+                super(props)
+                this.state={
+                    msg:"123",
+                    movies:["1","2","3","4"]
+                }
+            }
+            render(){
+                return (
+                    <div>
+                        <ul>
+                            {/* 注释 */}
+                            {this.state.movies.map(e=>{
+                                return <li>{e}</li>
+                            })}
+                        </ul>
+                    </div>
+                )
+            }
+            
+        }
+
+
+
+        ReactDOM.render(<App/>,document.getElementById("app"))
+    </script>
+
+
 </body>
 
 </html>
