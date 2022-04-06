@@ -2,29 +2,29 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
 
 <body>
 
-    <div id="app"></div>
+  <div id="app"></div>
 
-    <div style="color: red; font-size: 30px;"></div>
+  <div style="color: red; font-size: 30px;"></div>
 
-    <script src="../react.development.js"></script>
-    <script src="../react-dom.development.js"></script>
-    <script src="../babel.min.js"></script>
+  <script src="../react.development.js"></script>
+  <script src="../react-dom.development.js"></script>
+  <script src="../babel.min.js"></script>
 
-    <script type="text/babel">
+  <script type="text/babel">
 
-        class App extends React.Component {
+    class App extends React.Component {
       constructor(props) {
         super(props);
 
         this.state = {
-            count:0
+            count:10
         }
       }
 
@@ -34,19 +34,19 @@
           <div>
             <h3>{count}</h3>
             <button onClick={this.increment.bind(this)}>+1</button>
-            <button onClick={this.decrement}>-1</button>
+            <button onClick={(e)=>this.decrement(e)}>-1</button>
           </div>
         )
       }
       increment(){
-          this.setState({})
-          this.state.count++
-
-          console.log('%c [  ]-43', 'font-size:13px; background:pink; color:#bf2c9f;', this)
+          this.setState(()=>this.state.count+=1)
       }
 
-      decrement=(e)=>{
-          console.log('%c [  ]-49', 'font-size:13px; background:pink; color:#bf2c9f;', e)
+      decrement(e){
+        console.log(e);        
+        this.setState({
+          count:this.state.count-=1
+        })
       }
     }
 
