@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 
+
+ 
 export default class NavBar extends Component {
 
 
@@ -10,11 +12,11 @@ export default class NavBar extends Component {
         return (
             <div>
                 {/* left */}
-                {leftSlot}
                 {/* center */}
                 {centerSlot}
                 {/* right */}
                 {rightSlot}
+                {leftSlot}
             </div>
         )
     }

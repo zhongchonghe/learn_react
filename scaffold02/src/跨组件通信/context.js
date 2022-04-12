@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 
+
 // 第一步:创建Context对象 
 const UserContext = React.createContext({
   nickname: "aaa",
@@ -67,7 +68,7 @@ export default class context extends Component {
   render() {
     return (
       <div>
-        {/* 第二部 */}
+        {/* 第二步 */}
         <UserContext.Provider value={this.state}>
           <Profile />
         </UserContext.Provider>
