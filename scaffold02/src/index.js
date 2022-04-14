@@ -6,7 +6,8 @@ import React from 'react';
 // import App from './兄弟组件通信/brother'
 // import App from './高阶组件/定义方式'
 // import App from './高阶组件/鉴权'
-import App from './高阶组件/生命周期劫持'
+// import App from './高阶组件/生命周期劫持'
+import App from './样式/home'  
 
 import { createRoot } from 'react-dom/client';
 const container = document.getElementById('root')
