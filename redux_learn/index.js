@@ -37,7 +37,7 @@
 
 // // actions
 
-import store from './store/index'
+import store from './store/store.js'
 
 import { addAction, subAction } from './store/actionCreator.js'
 
