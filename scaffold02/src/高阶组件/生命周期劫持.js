@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react'
+import React, { Fragment, PureComponent } from 'react'
 
 
 
@@ -33,7 +33,12 @@ function withRenderTime(WrappedComponent) {
 
 class Home extends PureComponent {
   render() {
-    return <h2>123</h2>
+    return (
+    <Fragment>
+    <h2>123</h2>
+      <button>123</button>
+      </Fragment>
+      )
   }
 }
 
