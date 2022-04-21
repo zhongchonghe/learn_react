@@ -3,7 +3,7 @@ import { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { increment, asyncIncrement } from "./store/feature/counterSlice";
 import { loadData } from "./store/feature/movieSlice";
-
+import Counter from './pages/hooks'
 function App() {
   const { count } = useSelector(state => state.counter)
   const { list } = useSelector(state => state.movie)
@@ -18,6 +18,7 @@ function App() {
       {
         list.map(e => <div key={e.id}>{e.name}</div>)
       }
+      <Counter/>
     </div>
   );
 }
